@@ -46,17 +46,17 @@ const Home = () => {
   return (
     <div className="overflow-hidden">
       {/* first section starts here */}
-      <div className="bg-[#FFF4E3]  grid grid-cols-2 items-center justify-center px-[140px] gap-[40px]">
-        <div data-aos="fade-right">
-          <h2 className="text-[#000400] text-[90px] font-bold leading-tight">
-            Adopt A <br />
-            Furry Friend
+      <div className="bg-[#FFF4E3] flex sm:flex-row flex-col sm:px-[180px] px-[24px] pt-[30px] sm:pt-0 justify-between items-center gap-[90px] pb-[40px]">
+        <div data-aos="fade-right px-[34px]">
+          <h2 className="text-[#000400] sm:text-[90px] text-[37px] font-bold sm:leading-tight">
+            Adopt A 
+            Furry <br /> Friend
           </h2>
-          <p className="text-[#55595e] text-[18px] mt-4">
+          <p className="text-[#55595e] sm:text-[18px] text-[14px] mt-4 button-font">
             Life is easier with a furry best friend by your side. Find your new
             pet from our animal shelters.
           </p>
-          <div className="flex items-center bg-white rounded-full shadow-md p-3 max-w-md mt-10">
+          <div className="flex items-center bg-white rounded-full shadow-md p-3 max-w-md sm:mt-10 mt-8">
             <FaSearch className="text-gray-400 mx-3" />
             <input
               type="text"
@@ -68,22 +68,22 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div data-aos="fade-left" className="flex items-center justify-center">
-          <img src={Hero} className="object-cover w-[550px]" alt="" />
+        <div data-aos="fade-left" className="">
+          <img src={Hero} className="object-cover sm:w-[550px]" alt="" />
         </div>
       </div>
       {/* first section ends here */}
 
       {/* second section starts here */}
       <div
-        className="bg-[#ffff] px-[140px] py-[90px] flex flex-col items-center justify-center"
+        className="bg-[#ffff] sm:px-[140px] sm:py-[90px] py-[70px] flex flex-col items-center justify-center"
       >
         <div data-aos="fade-up">
-          <h2 className="text-[55px] text-center font-semibold">
+          <h2 className="sm:text-[55px] text-[28px] text-center font-semibold">
             Animals Available For <br /> Adoption Near You
           </h2>
         </div>
-        <div data-aos="fade-right" className="flex gap-[54px] mt-[60px]">
+        <div data-aos="fade-right" className="grid sm:grid-cols-3 grid-cols-1 sm:gap-[54px] gap-[42px] sm:mt-[60px] mt-[30px]">
           {allPets.map((pet, index) => (
               <Card
               key={index}
@@ -100,15 +100,15 @@ const Home = () => {
       {/* second section ends here */}
 
       {/* third section starts here */}
-      <div className="pb-[90px] mt-4 grid grid-cols-2 items-center justify-center px-[140px]">
+      <div className="pb-[90px] mt-4 grid sm:grid-cols-2 items-center justify-center sm:px-[140px] px-[24px]">
         <div data-aos="fade-right" className="flex items-center justify-center">
           <img src={person} className="object-cover w-[460px]" alt="" />
         </div>
         <div data-aos="fade-left">
-          <h2 className="text-[#000400] text-[55px] font-bold leading-tight">
-            Adopt Pets And <br /> Save Their Lives
+          <h2 className="text-[#000400] sm:text-[55px] text-[28px] sm:mt-0 mt-[42px] font-bold leading-tight">
+            Adopt Pets And Save Their Lives
           </h2>
-          <p className="text-[#7f817f] text-[18px] my-[34px] button-font">
+          <p className="text-[#7f817f] sm:text-[18px] text-[14px] sm:my-[34px] my-[18px] sm:text-auto text-justify button-font">
             Why bother shopping for pets when they are thousands of homeless
             puppies and kittens looking for a family? Adopt rescued animals from
             our shelters and make a change in the lives of animals in your area.
@@ -120,7 +120,7 @@ const Home = () => {
         </div>
       </div>
       {/* third section ends here */}
-      <div className="bg-[#FFF4E3] py-[90px]"
+      <div className="bg-[#FFF4E3] py-[90px] px-[24px] sm:px-0"
       style={{
         backgroundImage: `url(${assets})`,
         backgroundSize: "cover",
@@ -129,12 +129,12 @@ const Home = () => {
       }}
       >
         <div className="text-center" data-aos="fade-up">
-          <h2 className="text-[#000400] text-[55px] font-bold leading-tight">
+          <h2 className="text-[#000400] sm:text-[55px] text-[28px] font-bold leading-tight">
             Hear From Our Pet Parents
           </h2>
-          <p className="text-[#55595e] text-[18px] my-[20px] button-font">
+          <p className="text-[#55595e] sm:text-[18px] text-[14px] my-[20px] button-font">
             Don’t just take our word for it. Hear from over hundreds of pet
-            owners who have <br /> rescued animals from our shelters.
+            owners who have rescued animals from our shelters.
           </p>
         </div>
         <div data-aos="fade-left" className=""

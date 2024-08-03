@@ -44,7 +44,7 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    if (sessionStorage.getItem("role").toUpperCase() !== ADMIN) navigate("/");
+    if (sessionStorage.getItem("role")?.toUpperCase() !== ADMIN) navigate("/");
   }, []);
 
   const renderPets = async (page) => {
@@ -160,9 +160,9 @@ const Admin = () => {
   };
 
   return (
-    <div className="p-4 min-h-screen flex flex-col items-center bg-[#FFF4E3] pb-[120px]">
-        <ToastContainer />
-      <div className="flex justify-between px-[210px] py-8 w-full">
+    <div className="sm:p-4 min-h-screen flex flex-col items-center bg-[#FFF4E3] sm:pb-[120px] pb-[60px]">
+      <ToastContainer />
+      <div className="flex justify-between items-center sm:px-[210px] px-[24px] py-8 w-full">
         <h1 className="text-2xl font-bold card-font">Admin Panel</h1>
         <button
           onClick={() => setShowForm(true)}
@@ -237,7 +237,7 @@ const Admin = () => {
 
       {allPets.length > 0 ? (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[54px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 sm:gap-[54px] gap-[42px]">
             {allPets.map((pet, index) => (
               <Card
                 key={index}
@@ -301,7 +301,7 @@ const Admin = () => {
           setSelectedPet(null);
         }}
       >
-        <div className="p-8">
+        <div className="p-4 sm:p-6 md:p-8 max-w-lg mx-auto bg-white rounded-lg ">
           <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center button-font">
             Edit Pet
           </h2>
@@ -312,7 +312,7 @@ const Admin = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="Name"
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
             <input
@@ -321,7 +321,7 @@ const Admin = () => {
               value={form.age}
               onChange={handleChange}
               placeholder="Age"
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
             <input
@@ -330,13 +330,13 @@ const Admin = () => {
               value={form.gender}
               onChange={handleChange}
               placeholder="Gender"
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
             <input
               type="file"
               onChange={handleFileChange}
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-200"
               accept="image/*"
             />
             <input
@@ -345,13 +345,12 @@ const Admin = () => {
               value={form.temperament}
               onChange={handleChange}
               placeholder="Temperament (comma-separated)"
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-200"
               required
             />
             <button
               type="submit"
-              className="w-full button-font border border-green-500 bg-green-500 text-white hover:bg-green-600 transition duration-300 font-semibold py-2 px-4 rounded-md "
-              onClick={handleSubmit}
+              className="w-full button-font border border-green-500 bg-green-500 text-white hover:bg-green-600 transition duration-300 font-semibold py-2 px-4 rounded-md"
             >
               Update Pet
             </button>
@@ -361,22 +360,26 @@ const Admin = () => {
 
       <Modal isOpen={showDeleteModal} onClose={() => setShowDeleteModal(false)}>
         <div className="p-8">
-        <h2 className="text-xl font-semibold mb-4 button-font">Confirm Delete</h2>
-        <p className="button-font">Are you sure you want to delete this pet?</p>
-        <div className="mt-4 flex justify-end space-x-2">
-          <button
-            onClick={() => setShowDeleteModal(false)}
-            className="bg-gray-500 text-white p-2 rounded button-font"
-          >
-            Cancel
-          </button>
-          <button
-            onClick={confirmDelete}
-            className="bg-red-500 text-white p-2 rounded button-font"
-          >
-            Delete
-          </button>
-        </div>
+          <h2 className="text-xl font-semibold mb-4 button-font">
+            Confirm Delete
+          </h2>
+          <p className="button-font">
+            Are you sure you want to delete this pet?
+          </p>
+          <div className="mt-4 flex justify-end space-x-2">
+            <button
+              onClick={() => setShowDeleteModal(false)}
+              className="bg-gray-500 text-white p-2 rounded button-font"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={confirmDelete}
+              className="bg-red-500 text-white p-2 rounded button-font"
+            >
+              Delete
+            </button>
+          </div>
         </div>
       </Modal>
     </div>

@@ -38,7 +38,7 @@ function PetPage() {
   return (
     <div className="overflow-hidden">
       <div
-        className="bg-[#FFF4E3] py-[120px]"
+        className="bg-[#FFF4E3] sm:py-[120px] py-[60px]"
         style={{
           backgroundImage: `url(${assets})`,
           backgroundSize: "cover",
@@ -46,17 +46,17 @@ function PetPage() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="text-center">
-          <h2 className="text-[#000400] text-[85px] font-bold mb-[20px]">
+        <div className="text-center px-[24px] sm:px-0">
+          <h2 className="text-[#000400] sm:text-[85px] text-[43px] font-bold mb-[20px]">
             Adopt a Pet
           </h2>
-          <p className="text-[#55595e] text-[18px] button-font">
-            Pets available for adoption. Find your new pet from our animal shelters <br /> and rescue partners.
+          <p className="text-[#55595e] sm:text-[18px] text-[15px] button-font">
+            Pets available for adoption. Find your new pet from our animal shelters and rescue partners.
           </p>
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="grid grid-cols-3 gap-[54px] mt-[120px]">
+        <div className="grid sm:grid-cols-3 sm:gap-[54px] gap-[42px] sm:mt-[120px] mt-[70px]">
           {allPets.map((pet, index) => (
             <>
               <Card
@@ -72,7 +72,7 @@ function PetPage() {
           ))}
         </div>
       </div>
-      <div className="mt-[42px] mb-[120px] flex justify-center items-center space-x-4">
+      <div className="mt-[42px] sm:mb-[120px] mb-[60px] flex justify-center items-center space-x-4">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage <= 1}

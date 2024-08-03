@@ -42,7 +42,7 @@ function Contact() {
     <div className="overflow-hidden">
       <ToastContainer />
       <div
-        className="bg-[#FFF4E3] py-[120px]"
+        className="bg-[#FFF4E3] sm:py-[120px] py-[60px]"
         style={{
           backgroundImage: `url(${assets})`,
           backgroundSize: "cover",
@@ -50,18 +50,18 @@ function Contact() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="text-center">
-          <h2 className="text-[#000400] text-[85px] font-bold mb-[20px]">
+        <div className="text-center px-[24px] sm:px-0">
+          <h2 className="text-[#000400] sm:text-[85px] text-[43px] font-bold sm:mb-[20px] mb-2">
             Contact
           </h2>
-          <p className="text-[#55595e] text-[18px] button-font">
-            If you would like to donate to our cause or report a stray <br />
-            animal, then please contact our 24/7 help center
+          <p className="text-[#55595e] sm:text-[18px] text-[15px] button-font">
+            If you would like to donate to our cause or report a stray animal,
+            then please contact our 24/7 help center
           </p>
         </div>
       </div>
       <div
-        className="flex flex-col justify-center items-center mt-[60px] mb-[120px]"
+        className="flex flex-col justify-center items-center mt-[60px] sm:mb-[120px] mb-[60px] sm:mx-0 mx-4"
         style={{
           backgroundImage: `url(${assets2})`,
           backgroundSize: "cover",
@@ -69,22 +69,22 @@ function Contact() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="grid grid-cols-3 items-center justify-between gap-[160px] mb-[60px]">
-          <div className="flex flex-col items-center button-font font-semibold">
-            <div className="flex justify-center items-center w-16 h-16 rounded-full bg-orange-400 mb-4">
-              <FaEnvelope className="text-white text-2xl" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 items-center justify-between gap-8 sm:gap-16 mb-16 px-4 sm:px-8 lg:px-16">
+          <div className="flex flex-col items-center text-center font-semibold button-font">
+            <div className="flex justify-center items-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-orange-400 mb-4">
+              <FaEnvelope className="text-white text-xl sm:text-2xl" />
             </div>
             <p>Petpals@adoption.com</p>
           </div>
-          <div className="flex flex-col items-center button-font font-semibold">
-            <div className="flex justify-center items-center w-16 h-16 rounded-full bg-orange-400 mb-4">
-              <FaPhone className="text-white text-2xl" />
+          <div className="flex flex-col items-center text-center font-semibold button-font">
+            <div className="flex justify-center items-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-orange-400 mb-4">
+              <FaPhone className="text-white text-xl sm:text-2xl" />
             </div>
             <p>3297 0607</p>
           </div>
-          <div className="flex flex-col items-center button-font font-semibold">
-            <div className="flex justify-center items-center w-16 h-16 rounded-full bg-orange-400 mb-4">
-              <FaMapMarkerAlt className="text-white text-2xl" />
+          <div className="flex flex-col items-center text-center font-semibold button-font">
+            <div className="flex justify-center items-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-orange-400 mb-4">
+              <FaMapMarkerAlt className="text-white text-xl sm:text-2xl" />
             </div>
             <p>38 Brisbane city</p>
           </div>

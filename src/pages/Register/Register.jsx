@@ -54,7 +54,7 @@ const Register = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
+      <div className="bg-white p-10 rounded-lg shadow-lg w-full max-w-md sm:mx-0 mx-4">
         <h2 className="text-2xl font-semibold mb-6 text-center button-font">Register</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
