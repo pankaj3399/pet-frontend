@@ -6,7 +6,7 @@ import {
   updatePet,
   deletePet,
   getAllPets,
-} from "../../ApiService/ApiService"; // Adjust the import path as needed
+} from "../../ApiService/ApiService";
 import { ADMIN } from "../../Constants";
 import { FaChevronLeft, FaChevronRight, FaPlus, FaPaw } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -198,15 +198,19 @@ const Admin = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                   required
                 />
-                <input
-                  type="text"
+                <select
                   name="gender"
                   value={form.gender}
                   onChange={handleChange}
-                  placeholder="Gender"
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Select Gender
+                  </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
                 <input
                   type="file"
                   onChange={handleFileChange}

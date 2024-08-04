@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="sm:text-center md:text-left mb-6 md:mb-0 mr-10">
           <div className="flex items-center sm:justify-center md:justify-start">
-            <img src={Logo} alt="Petpals Logo" className="" />
+            <img src={Logo } alt="Petpals Logo" className="w-[200px]" />
           </div>
           <p className="mt-4 text-white text-sm button-font">
             Lorem ipsum dolor sit amet, consetetur <br /> sadipscing elitr, sed diam.

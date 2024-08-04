@@ -64,13 +64,13 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a
+          {/* <a
             href="#"
             className="text-black hover:text-orange-600 font-semibold"
             onClick={toggleDrawer}
           >
             About
-          </a>
+          </a> */}
           <a
             href="/pets"
             className="text-black hover:text-orange-600 font-semibold"
@@ -128,12 +128,12 @@ const Navbar = () => {
         >
           Home
         </a>
-        <a
+        {/* <a
           href="#"
           className="text-black hover:text-orange-600 font-semibold transition duration-300"
         >
           About
-        </a>
+        </a> */}
         <a
           href="/pets"
           className="text-black hover:text-orange-600 font-semibold transition duration-300"
